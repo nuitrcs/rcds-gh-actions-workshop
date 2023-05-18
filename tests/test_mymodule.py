@@ -19,7 +19,7 @@
 """Unit test for nuitrcs_example.YOURMODULE classes
 """
 
-from ..mymodule.mymodule import MyClass
+from nuitrcs_example.mymodule.mymodule import MyClass
 
 
 class TestMyClass(object):
