@@ -1,0 +1,26 @@
+nuitrcs\_example package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   nuitrcs_example.mymodule
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   nuitrcs_example.pipeline
+
+Module contents
+---------------
+
+.. automodule:: nuitrcs_example
+   :members:
+   :undoc-members:
+   :show-inheritance:

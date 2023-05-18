@@ -1,0 +1,4 @@
+.. automodule:: nuitrcs_example.mymodule.mymodule
+   :members:
+   :undoc-members:
+   :show-inheritance:
