@@ -23,7 +23,7 @@ requirements:
 
 test:
   imports:
-    - YOURPACKAGE
+    - nuitrcs_example
 
 about:
   home: https://github.com/nuitrcs/rcds-gh-actions-workshop
