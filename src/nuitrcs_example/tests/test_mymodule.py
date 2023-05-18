@@ -21,6 +21,7 @@
 
 from ..mymodule.mymodule import MyClass
 
+
 class TestMyClass(object):
     def test_myclass(self):
         assert 1 == MyClass().return_one()
