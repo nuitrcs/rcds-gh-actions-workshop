@@ -22,13 +22,15 @@ Place package import here
 
 import numpy
 
+
 __author__ = 'YOUR NAME <YOUREMAIL@gmail.com>'
 __credits__ = 'Scott Coughlin <scottcoughlin2014@u.northwestern.edu>'
 __all__ = ['MyClass']
 
+
 class MyClass(object):
     def return_one(self):
         return 1
-    
+
     def use_numpy(self):
         return numpy.array(1)
