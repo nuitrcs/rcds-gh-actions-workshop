@@ -85,8 +85,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'nuitrcs_example'
-copyright = u'2021, YOUR NAME'
-author = u'YOUR NAME'
+copyright = u'2023, Scott Coughlin'
+author = u'Scott Coughlin'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -308,7 +308,7 @@ man_pages = [
 # dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'nuitrcs_example', u'nuitrcs_example Documentation',
-     author, 'nuitrcs_example', 'White dwarf Accretion w/ COSMIC.',
+     author, 'nuitrcs_example', 'Something',
      'Miscellaneous'),
 ]
 
