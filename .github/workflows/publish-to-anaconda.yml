@@ -1,17 +1,25 @@
-name: publish_conda
+name: Publish to Anaconda Cloud
 
 on:
   release:
     types: [published]
-    
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
     - name: publish-to-conda
-      uses: fcakyon/conda-publish-action@v1.3
+      uses: scottcoughlin2014/publish_conda_package_action@v2.0.0
       with:
-        subdir: 'conda'
-        anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
-        platforms: 'win osx linux'
+        # CondaDir: locate the directory containing your meta.yml, conda_build_config.yaml (...) files
+        CondaDir: 'conda'
+        # Channels: You can add more channel with a space separator
+        Channels: 'conda-forge' 
+        # Platforms: remove one or more of these platforms
+        Platforms: 'noarch'
+        AnacondaToken: ${{ secrets.ANACONDA_TOKEN }}
+        CondaChannel: 'scottcoughlin2014'
