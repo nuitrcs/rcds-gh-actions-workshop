@@ -1,3 +1,8 @@
-include LICENSE README.md MANIFEST.in
-include versioneer.py
-include nuitrcs_example/_version.py
+  include *.yml
+  include Dockerfile
+  recursive-include conda *.yaml
+  recursive-include docs *.css
+  recursive-include docs *.html
+  recursive-include docs *.py
+  recursive-include docs *.rst
+  recursive-include docs Makefile
