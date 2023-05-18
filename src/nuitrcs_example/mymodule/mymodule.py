@@ -29,3 +29,6 @@ __all__ = ['MyClass']
 class MyClass(object):
     def return_one(self):
         return 1
+    
+    def use_numpy(self):
+        return numpy.array(1)
