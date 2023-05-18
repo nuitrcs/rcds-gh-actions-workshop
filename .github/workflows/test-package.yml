@@ -1,9 +1,9 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Unit Test YOURPACKAGE
+name: Unit Test nuitrcs_example
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -32,21 +32,7 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py', '**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
-    - name: Install dependencies
-      run: |
-        # sudo apt-get install gfortran swig libhdf5-serial-dev libmpich-dev
-        python -m pip install coverage cpp-coveralls flake8 pytest pytest-cov
-        python -m pip install .[doc]
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude docs
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude docs,versioneer.py,YOURPACKAGE/_version.py,YOURPACKAGE/tests,YOURPACKAGE/*/__init__.py
-    - name: Test with pytest
-      run: |
-        pytest --cov=./YOURPACKAGE --cov-report=xml
-        cd docs && make html; cd ../
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
+    - name: Install test dependencies
+      run: python -m pip install -U tox
+    - name: Test
+      run: python -m tox -e py
